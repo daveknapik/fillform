@@ -1,0 +1,34 @@
+Application name: fillform
+Author: Dave Knapik
+Date: 9 March 2011
+
+---
+
+Description:
+
+Fillform is a simple command line utility that automatically completes lead forms on our site with a set of standard test data. Its purpose is to save time when browser testing.
+
+---
+
+Usage as a Ruby script:
+
+1. First you must have Ruby 1.9 or higher installed on your system
+
+2. You must also get the firewatir gem (http://code.google.com/p/firewatir/) and install the associated firewatir Firefox plugin.
+
+3. Firefox must be opened from the command line with the -jssh flag set, like this:
+
+/Applications/Firefox.app/Contents/MacOS/firefox-bin -jssh
+
+4. Now you can autocomplete forms, for example: ruby bin/fillform http://www.nl.edu/wisconsin/learnmore.cfm
+
+or, the same example that doesn't submit the form: ruby bin/fillform -nosubmit http://www.nl.edu/wisconsin/learnmore.cfm
+
+---
+
+Usage as a Ruby gem
+
+Follow steps 1-3 above, then install the latest gem version inside fillform/pkg. Once the gem has been installed, you can call it like so:
+
+fillform  http://www.nl.edu/wisconsin/learnmore.cfm
+fillform -nosubmit http://www.nl.edu/wisconsin/learnmore.cfm

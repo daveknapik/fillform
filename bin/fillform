@@ -1,0 +1,8 @@
+#! /Users/david.knapik/.rvm/rubies/ruby-1.9.2-p0/bin/ruby
+
+$LOAD_PATH.unshift( File.join( File.dirname(__FILE__), '../lib' ) )
+
+require 'runner'
+
+runner = TestLeadForm::Runner.new(ARGV)
+runner.run
